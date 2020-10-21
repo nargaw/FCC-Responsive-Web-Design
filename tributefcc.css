@@ -1,0 +1,206 @@
+body{
+  background-color: #ecf8f8;
+  max-width: 800px;
+  margin: 0 auto 50px auto;
+}
+
+img{
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  height: auto;
+}
+
+#imgbooks{
+  width: 90px;
+  height: 150px;
+}
+
+a{
+  text-decoration: none;
+}
+
+#books li{
+  margin-right: 300px;
+  max-width: 300px;
+}
+
+#book1{
+  margin: -125px 300px 0;
+  max-height: 150px;
+  max-width: 90px;
+  position: relative;
+  opacity: 1;
+  transform: scale(90%);
+}
+#book2{
+  margin: -135px 400px 0;
+  max-height: 150px;
+  max-width: 90px;
+  position: relative;
+  opacity: 1;
+  transform: scale(90%);
+}
+#book3{
+  margin: -138px 500px 0;
+  max-height: 150px;
+  max-width: 90px;
+  position: relative;
+  opacity: 1;
+}
+#book4{
+  margin: -143px 600px 0;
+  max-height: 150px;
+  max-width: 90px;
+  position: relative;
+  opacity: 1;
+  transform: scale(90%);
+}
+#book5{
+  margin: -138px 700px 0;
+  max-height: 150px;
+  max-width: 90px;
+  position: relative;
+  opacity: 1;
+  transform: scale(90%);
+}
+
+
+#book1:hover{
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+#book2:hover{
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+#book3:hover{
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+#book4:hover{
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+#book5:hover{
+  border-width: medium;
+  border-color: black;
+  border-style: solid;
+}
+
+h1{
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 70px;
+  padding: 0;
+}
+
+#pronunce{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  text-align: center;
+}
+
+#subtitle{
+  text-align: center;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 24px;
+}
+
+#img-caption{
+  font-family: 'Raleway', sans-serif;
+  font-size: 12px;
+  text-align: center;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+h2{
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20px;
+  margin-left: 0px;
+}
+
+#list{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto 0px auto;
+  text-align: left;
+}
+
+#books{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto 0px auto;
+  text-align: left;
+}
+
+p{
+  font-family: 'Raleway', sans-serif;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto 0px auto;
+  text-align: left;
+}
+
+blockquote{
+  padding: 50px;
+  font-size: 30px;
+}
+
+.dropbtn{
+  background-color: #003049;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+  font-family: 'Abril Fatface', cursive;
+  font-size: 20pt;
+}
+
+.dropdown{
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  font-family: 'Abril Fatface', cursive;
+}
+
+.dropdown-content a{
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: #3e8e41;
+}
+
+#img-div{
+  margin: center;
+}

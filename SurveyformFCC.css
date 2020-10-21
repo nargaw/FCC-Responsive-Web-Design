@@ -1,0 +1,146 @@
+body{
+  max-width: 400px;
+  margin: 100px auto;
+  background: rgb(0,36,36);
+  background: linear-gradient(90deg, rgb(59, 129, 129) 0%, rgba(0,172,255,1) 100%);
+}
+
+h1{
+  font-family: 'Staatliches', cursive;
+  padding: 0;
+  margin: 0;
+  font-size: 40px;
+  color: rgb(255, 255, 255);
+}
+
+#description{
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin-top: 0;
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+}
+
+.name-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  text-align: left;
+  color: rgb(255, 255, 255);
+}
+
+.email-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.number-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.dropdown-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.checkbox-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.radio-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+.additional-form{
+  font-family: 'Open Sans Condensed', sans-serif;
+  padding-bottom: 5px;
+  font-size: 18px;
+  color: rgb(255, 255, 255);
+}
+
+button{
+  font-family: 'Staatliches', cursive;
+  transition-duration: 0.4s;
+  border-radius: 8px;
+  padding: 10px 24px;
+  font-size: 18px;
+}
+
+button:hover {
+  background-color: #04290a;
+  color: white;
+}
+
+#dropdownp{
+  margin-bottom: 0%;
+}
+
+#subp{
+  margin-bottom: 0%;
+}
+
+#commentp{
+  margin-bottom: 0%;
+  margin-top: 5px;
+}
+
+.header-matrix{
+  text-align: left;
+}
+
+th {
+  display: table-cell;
+  vertical-align: inherit;
+  font-weight: normal;
+  text-align: left;
+  padding-left: 0;
+  }
+
+select{
+  position: relative;
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size: 18px;
+  }
+
+textarea{
+  margin: 0px;
+  width: 394px;
+  height: 140px;
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+#name{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#email{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}
+
+#number{
+  font-family: 'Open Sans Condensed', sans-serif;
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+}

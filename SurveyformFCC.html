@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Staatliches&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans+Condensed:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="SurveyformFCC.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Survey Form</title>
+</head>
+<body>
+    <form action="#">
+    <div id="container">
+        <header class="header">
+            <h1 id="title">Customer Survey Form</h1>
+            <p id="description">We appreciate your time to help us imporove our services.</p>
+        </header>
+        <form id="survey-form" action="submittedsurveryform.html">
+            <div class="name-form">
+                <label for="name" id="name-label">Name:</label>
+                <input type="text" id="name" placeholder="please enter your name">
+            </div>
+            <div class="email-form">
+                <label for="email" id="email-label">Email:</label>
+                <input type="email" id="email" placeholder="please enter your email">
+            </div>
+            <div class="number-form">
+                <label for="number" id="number-label">Zip Code:</label>
+                <input type="number" id="number" placeholder="12345" pattern="[0-9]{5}" min="00001" max="99999">
+            </div>
+            <div class="dropdown-form">
+                <p id="dropdownp">How did you hear about us?</p>
+                <select name="dropdown" id="dropdown">
+                    <option disabled selected value>select an option</option>
+                    <option value="Social">Social Media (Facebook, Twitter, etc.)</option>
+                    <option value="Friend">Recommendation from a friend</option>
+                    <option value="Article">News Article</option>
+                    <option value="Search">Search Engine (Google, Yahoo, etc.)</option>
+                    <option value="Blog">Forum or Blog</option>
+                </select>
+            </div>
+            <div class="checkbox-form">
+                <p id="subp">Subscribe to our updates, newsletter and services.</p>
+                <label for="text">
+                    <input name="Subscribe" type="checkbox" class="textinput" value="text">Text
+                </label>
+                <label for="emailsub">
+                    <input type="checkbox" name="Subscribe" id="emailinput" value="email">Email
+                </label>
+            </div>
+            <div class="radio-form">
+                <table summary="overall-satisfaction" role="presentation" cellpadding="5" cellspacing="5" class="matrix-form" data-component="matrix">     
+                    <tbody>
+                        <tr class="header-matrix">
+                            <th class="form-matrix" id="os">Overall Satisfaction</th>
+                            <th scope="col" class="formheaders formcolumnheaders">
+                                <label id="Satisfied">Satisfied</label></th>
+                            <th scope="col" class="formheaders formcolumnheaders">
+                                <label id="Neutral">Neutral</label></th>
+                            <th scope="col" class="formheaders formcolumnheaders">
+                                <label id="Unsatisfied">Unsatisfied</label></th>
+                        </tr>
+                        <tr class="matrix-values" role="group">
+                            <th scope="row" class="formheaders formrowheaders">
+                                <label id="row1">Customer Service:</label>
+                            </th>
+                            <td class="form-matrix">
+                                <input type="radio" name="cs" id="cssatisfied" value="cssatisfied"><label for="cssatisfied"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="cs" id="csneutral" value="csneutral"><label for="csneutral"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="cs" id="csunsatisfied" value="csunsatisfied"><label for="csunsatisfied"></label>
+                            </td>
+                        </tr>
+                        <tr class="matrix-values" role="group">
+                            <th scope="row" class="formrowheaders formrowheaders">
+                                <label id="row1">Timeliness:</label>
+                            </th>
+                            <td class="form-matrix">
+                                <input type="radio" name="time" id="timesatisfied" value="timesatisfied"><label for="timesatisfied"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="time" id="timeneutral" value="timeneutral"><label for="timeneutral"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="time" id="timeunsatisfied" value="timeunsatisfied"><label for="timeunsatisfied"></label>
+                            </td>
+                        </tr>
+                        <tr class="matrix-values" role="group">
+                            <th scope="row" class="formheaders formrowheaders">
+                                <label id="row1">Quality:</label>
+                            </th>
+                            <td class="form-matrix">
+                                <input type="radio" name="Quality" id="qsatisfied" value="qsatisfied"><label for="qsatisfied"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="Quality" id="qneutral" value="qneutral"><label for="qneutral"></label>
+                            </td>
+                            <td class="form-matrix">
+                                <input type="radio" name="Quality" id="qunsatisfied" value="qunsatisfied"><label for="qunsatisfied"></label>
+                            </td>
+                        </tr>
+                    </tbody>    
+                </table>
+            </div>
+            <div class="additional-form">
+                <p id="commentp">Comments and/or Suggestions:</p>
+                <textarea name="comment" id="comment" cols="30" rows="10" placeholder="Enter your comments here..."></textarea>
+            </div>
+            <div class="button">
+                <button type="submit" id="submit" class="submit-button">Submit</button>
+            </div>
+        </form>
+    </div>
+</body>
+</html>
