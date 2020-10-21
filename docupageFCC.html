@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond&family=Playfair+Display&family=Poppins&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="docupageFCC.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FCC Technical Documentation Page</title>
+</head>
+<body>
+    <nav id="navbar">
+        <header id="mainhead">CSS Building Blocks</header>
+        <ul>
+            <li>
+                <a href="#Cascade_and_inheritance" class="nav-link">Cascade and inheritance</a>
+            </li>
+            <li>
+                <a href="#CSS_selectors" class="nav-link">CSS selectors</a>
+            </li>
+            <li>
+                <a href="#The_box_model" class="nav-link">The box model</a>
+            </li>
+            <li>
+                <a href="#Backgrounds_and_borders" class="nav-link">Backgrounds and borders</a>
+            </li>
+            <li>
+                <a href="#Handling_different_text_directions" class="nav-link">Handling different text directions</a>
+            </li>
+            <li>
+                <a href="#Overflowing_content" class="nav-link">Overflowing content</a>
+            </li>
+            <li>
+                <a href="#CSS_values_and_units" class="nav-link">CSS values and units</a>
+            </li>
+            <li>
+                <a href="#Sizing_items_in_CSS" class="nav-link">Sizing items in CSS</a>
+            </li>
+            <li>
+                <a href="#Debugging_CSS" class="nav-link">Debugging CSS</a>
+            </li>
+            <li>
+                <a href="#Organizing_your_CSS" class="nav-link" id="oyc">Organizing your CSS</a>
+            </li>
+            <li>
+                <a href="#References" class="nav-link" id="ref">References</a>
+            </li>
+        </ul>
+    </nav>
+    <main id="main-doc"> 
+        <section id="Cascade_and_inheritance" class="main-section">
+            <header>Cascade and inheritance</header>
+            <article>
+                <p>Stylesheets cascade — at a very simple level this means that the order of CSS rules matter; when two rules apply that have equal specificity the one that comes last in the CSS is the one that will be used.</p>
+                <p>In the below example, we have two rules that could apply to the h1. The h1 ends up being colored blue — these rules have an identical selector and therefore carry the same specificity, so the last one in the source order wins.</p>
+                <code>
+                    h1 { 
+                        color: red; 
+                    }
+
+                    h1 { 
+                        color: blue; 
+                    }
+                </code>
+                <p>Specificity is how the browser decides which rule applies if multiple rules have different selectors, but could still apply to the same element. It is basically a measure of how specific a selector's selection will be:</p>
+                <ul>
+                    <li>An element selector is less specific — it will select all elements of that type that appear on a page — so will get a lower score.</li>
+                    <li>A class selector is more specific — it will select only the elements on a page that have a specific class attribute value — so will get a higher score.</li>
+                </ul>
+                <code>
+                    .main-heading { 
+                        color: red; 
+                    }
+                            
+                    h1 { 
+                        color: blue; 
+                    }     
+                </code>
+                <p>Inheritance also needs to be understood in this context — some CSS property values set on parent elements are inherited by their child elements, and some aren't. For example, if you set a color and font-family on an element, every element inside it will also be styled with that color and font, unless you've applied different color and font values directly to them.</p>
+            </article>
+        </section>    
+        <section id="CSS_selectors" class="main-section">
+            <header>CSS selectors</header>
+            <article>
+                <p>A CSS selector is the first part of a CSS Rule. It is a pattern of elements and other terms that tell the browser which HTML elements should be selected to have the CSS property values inside the rule applied to them. The element or elements which are selected by the selector are referred to as the subject of the selector.</p>
+            </article>
+        </section>   
+        <section id="The_box_model" class="main-section">
+            <header>The box model</header>
+            <article>
+                <p>In CSS we broadly have two types of boxes — block boxes and inline boxes. These characteristics refer to how the box behaves in terms of page flow, and in relation to other boxes on the page. If a box is defined as a block, it will behave in the following ways:</p>
+                <ul>
+                    <li>The box will break onto a new line.</li>
+                    <li>The box will extend in the inline direction to fill the space available in its container. In most cases this means that the box will become as wide as its container, filling up 100% of the space available.</li>
+                    <li>The width and height properties are respected.</li>
+                    <li>Padding, margin and border will cause other elements to be pushed away from the box.</li>
+                </ul>
+                <p>If a box has an outer display type of inline, then:</p>
+                <ul>
+                    <li>The box will not break onto a new line.</li>
+                    <li>The width and height properties will not apply.</li>
+                    <li>Vertical padding, margins, and borders will apply but will not cause other inline boxes to move away from the box.</li>
+                    <li>Horizontal padding, margins, and borders will apply and will cause other inline boxes to move away from the box.</li>
+                </ul>
+            </article>
+        </section>   
+        <section id="Backgrounds_and_borders" class="main-section">
+            <header>Backgrounds and borders</header>
+            <article>
+                <p>The background-color property defines the background color on any element in CSS. The property accepts any valid color. A background-color extends underneath the content and padding box of the element. The background-image property enables the display of an image in the background of an element.</p>
+                <p>A gradient — when used for a background — acts just like an image and is also set by using the background-image property.You can read more about the different types of gradients and things you can do with them on the MDN page for the gradient data type. A fun way to play with gradients is to use one of the many CSS Gradient Generators available on the web</p>
+                <code>
+                    .a {
+                    background-image: linear-gradient(105deg, rgba(0,249,255,1) 39%, rgba(51,56,57,1) 96%);
+                }
+                </code>
+                <p>Typically when we add borders to an element with CSS we use a shorthand property that sets the color, width, and style of the border in one line of CSS. We can set a border for all four sides of a box with border:</p>
+                <code>
+                    .box { 
+                        border: 1px solid black; 
+                    } 
+                </code>
+            </article>
+        </section>   
+        <section id="Handling_different_text_directions" class="main-section">
+            <header>Handling different text directions</header>
+            <article>
+                <p>A writing mode in CSS refers to whether the text is running horizontally or vertically. The writing-mode property lets us switch from one writing mode to another. You don't need to be working in a language which uses a vertical writing mode to want to do this — you could also change the writing mode of parts of your layout for creative purposes.</p>
+                <p>The three possible values for the writing-mode property are:</p>
+                <ul>
+                    <li>horizontal-tb: Top-to-bottom block flow direction. Sentences run horizontally.</li>
+                    <li>vertical-rl: Right-to-left block flow direction. Sentences run vertically.</li>
+                    <li>vertical-lr: Left-to-right block flow direction. Sentences run vertically.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="Overflowing_content" class="main-section">
+            <header>Overflowing content</header>
+            <article>
+                <p>Everything in CSS is a box. You can constrain the size of these boxes by assigning values of width and height (or inline-size and block-size). Overflow happens when there is too much content to fit in a box. CSS provides various tools to manage overflow. As you go further with CSS layout and writing CSS, you will encounter more overflow situations.</p>
+                <p>CSS does not hide content. This would cause data loss. The problem with data loss is that you might not notice. Website visitors may not notice. If the submit button on a form disappears and no one can complete the form, this could be a big problem! Instead, CSS overflows in visible ways. You are more likely to see there is a problem. At worst, a site visitor will let you know that content is overlapping.</p>
+                <p>The  overflow property is how you take control of an element's overflow. It is the way you instruct the browser how it should behave. The default value of overflow is visible. With this default, we can see content when it overflows. To crop content when it overflows, you can set overflow: hidden. This does exactly what it says: it hides overflow. Beware that this can make some content invisible. You should only do this if hiding content won't cause problems.</p>
+            </article>
+        </section>   
+        <section id="CSS_values_and_units" class="main-section">
+            <header>CSS values and units</header>
+            <article>
+                <p>CSS has several different units for expressing a length. Many CSS properties take "length" values, such as width, margin, padding, font-size, etc. Length is a number followed by a length unit, such as 10px, 2em, etc. A whitespace cannot appear between the number and the unit. However, if the value is 0, the unit can be omitted. For some CSS properties, negative lengths are allowed. There are two types of length units: absolute and relative.
+                </p>
+                <p>The absolute length units are fixed and a length expressed in any of these will appear as exactly that size. Absolute length units are not recommended for use on screen, because screen sizes vary so much. However, they can be used if the output medium is known, such as for print layout. Such as: cm, mm, in, px, etc.</p>
+                <p>Relative length units specify a length relative to another length property. Relative length units scale better between different rendering medium. Such as: em, ex, ch, rem, etc.</p>
+            </article>
+        </section>   
+        <section id="Sizing_items_in_CSS" class="main-section">
+            <header>Sizing items in CSS</header>
+            <article>
+                <p>HTML Elements have a natural size, set before they are affected by any CSS. A straightforward example is an image. An image has a width and a height defined in the image file it is embedding into the page. This size is described as the intrinsic size — which comes from the image itself. If you place an image on a page and do not change its height and width, either using attributes on the img tag or CSS, it will be displayed using that intrinsic size.</p>
+                <code>img {
+                    border: 5px solid darkblue;
+                  }</code>
+            </article>
+        </section>
+        <section id="Debugging_CSS" class="main-section">
+            <header>Debugging CSS</header>
+            <article>
+                <p>Something that can trip up newcomers to DevTools is the difference between what you see when you view the source of a webpage, or look at the HTML file you put on the server, and what you can see in the HTML Pane of the DevTools. While it looks roughly similar to what you can see via View Source there are some differences.</p>
+                <p>View Source in comparison, is simply the HTML source code as stored on the server. The HTML tree in your DevTools shows exactly what the browser is rendering at any given time, so it gives you an insight into what is really going on.</p>
+                <p>Select an element on your page, either by right/ctrl-clicking on it and selecting Inspect, or selecting it from the HTML tree on the left of the DevTools display.In addition to turning properties on and off, you can edit their values. Perhaps you want to see if another color looks better, or wish to tweak the size of something? DevTools can save you a lot of time editing a stylesheet and reloading the page.</p>
+            </article>
+        </section> 
+        <section id="Organizing_your_CSS" class="main-section">
+            <header>Organizing your CSS</header>
+            <article>
+                <p>As you start to work on larger stylesheets and big projects you will discover that maintaining a huge CSS file can be challenging. In this article we will take a brief look at some best practices for writing your CSS to make it easily maintainable, and some of the solutions you will find in use by others to help improve maintainability.</p>
+                <ul>
+                    <li>If you are working with a team on an existing project, the first thing to check is whether the project has an existing style guide for CSS.</li>
+                    <li>Keep it consistent.</li>
+                    <li>Adding comments to your CSS will help any future developer work with your CSS file, but will also help you when you come back to the project after a break.</li>
+                    <li>Avoid overly-specific selectors.</li>
+                    <li>Break large stylesheets into multiple smaller ones.</li>
+                </ul>
+            </article>
+        </section>
+        <section id="References" class="main-section">
+            <header>References</header>
+            <article>
+                <ul>
+                    <li>All information acquired from <a id="refid" href="https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks">MDN web docs</a></li>
+                </ul>
+            </article>
+        </section>       
+    </main>
+</body>
+</html> 

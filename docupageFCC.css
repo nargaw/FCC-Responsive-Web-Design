@@ -1,0 +1,117 @@
+body{
+    max-width: 100%;
+    background-color: #faf3dd;
+}
+
+#navbar{
+    position: fixed;
+    margin: 0 0;
+    width: 25vw;
+    height: 100%;
+    border-right: solid;
+    font-family: 'Playfair Display', serif;
+    text-decoration: none;
+}
+
+.nav-link {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 3vh;
+    padding-bottom:3vh;
+}
+
+nav li{
+    list-style-type: none;
+}
+
+nav ul{
+    padding-inline-start: 0;
+}
+
+a{
+    border-width: 1px;
+    border-top: solid;
+    border-color: black;
+    border-left: none;
+    margin-left:0;
+}
+
+#ref{
+    border-top: solid;
+    border-bottom: solid;
+    border-width: 3px;
+    border-color: black;
+}
+
+a:link{
+    color: black;
+}
+
+a:visited{
+    color: black;
+}
+
+a:hover{
+    background-color:black;
+    color: #faf3dd;
+}
+
+#refid{
+    border-top: none;
+}
+
+#References{
+    border-bottom: solid;
+    border-width: 1px;
+    border-color: black;
+}
+
+#main-doc{
+    margin-left: 30vw;
+    position: absolute;
+    margin-top: 0;
+    margin-bottom: 20vh;
+    margin-right: 20vw;
+}
+
+.main-section{
+    padding-bottom: 2vh;
+    font-family: 'Poppins', sans-serif;
+}
+
+header{
+    font-size: 4vh;
+    text-emphasis: bold;
+    font-family: 'Playfair Display', serif;
+}
+
+code{
+    display: block;
+    text-align: center;
+    padding: 1vh;
+    margin: 1vh;
+    background-color: blanchedalmond;
+    position: relative;
+}
+
+@media only screen and (max-width: 600px){
+    body{
+        display: flex;
+        flex-direction: column;
+    }
+    #main-doc{
+        margin-top: 750px;
+        max-width: 100%;
+        margin-left: 1vw;
+        width: 90%;
+    }
+
+    #navbar{
+        position: absolute;
+        width: 100%;
+        background-color:#faf3dd ;
+        color: black;
+    }
+}
+
